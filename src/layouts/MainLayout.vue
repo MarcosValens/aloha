@@ -21,9 +21,9 @@
       </q-img>
 
       <q-tabs align="center">
-        <q-route-tab to="/page1" label="Productos CBD" />
-        <q-route-tab to="/page2" label="Cultivos" />
-        <q-route-tab to="/page3" label="Fertilizantes" />
+        <q-route-tab to="/cbd" label="Productos CBD" />
+        <q-route-tab to="/cbd" label="Cultivos" />
+        <q-route-tab to="/cbd" label="Fertilizantes" />
       </q-tabs>
     </q-header>
 
@@ -35,6 +35,7 @@
           v-ripple
           :active="link === 'productosCBD'"
           @click="link = 'productosCBD'"
+          to="cbd"
           active-class="my-menu-link"
         >
           <q-item-section avatar>
