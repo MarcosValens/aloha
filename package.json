@@ -1,8 +1,8 @@
 {
-  "name": "alohacbd",
+  "name": "aloha_growshop",
   "version": "0.0.1",
-  "description": "Pagina web para la tienda alohaCBD",
-  "productName": "AlohaCBD",
+  "description": "Pagina web para la tienda Aloha Growshop",
+  "productName": "Aloha Growshop",
   "author": "marcos <marcosvalens@gmail.com>",
   "private": true,
   "scripts": {

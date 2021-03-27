@@ -1,29 +1,30 @@
 <template>
-  <q-layout view="hHh LpR fFf">
+  <q-layout view="hHh lpR fff">
     <!--HEADER-->
-    <q-header reveal elevated class="text-white">
-      <q-img
-        src="../assets/banner.jpg"
-        alt="fondo_banner"
-        style="max-height: 200px;"
-      >
-        <q-toolbar class="absolute-full ">
-          <q-btn round color="primary" icon="menu" @click="left = !left" />
-          <q-toolbar-title class="row justify-center">
-            <q-img
-              src="../assets/AlohaGrow.png"
-              spinner-color="white"
-              style="max-height: 150px; max-width: 150px"
-              alt="Logo Alohas"
-            />
-          </q-toolbar-title>
+    <q-header reveal elevated class="text-white row justify-center">
+      <q-parallax src="../assets/banner.jpg" :height="200">
+        <q-toolbar
+          class="col-1 desktop-hide1"
+          style="position: fixed; left:2vw; top:1vh"
+        >
+          <q-btn round color="secondary" icon="menu" @click="left = !left" />
+          <q-toolbar-title class="row justify-center"> </q-toolbar-title>
         </q-toolbar>
-      </q-img>
-
-      <q-tabs align="center">
-        <q-route-tab to="/cbd" label="Productos CBD" />
-        <q-route-tab to="/cbd" label="Cultivos" />
+        <q-img
+          src="../assets/aloha.png"
+          spinner-color="white"
+          alt="Logo Alohas"
+          style="max-width: 150px"
+        />
+      </q-parallax>
+      <q-tabs align="center" class="desktop-only">
+        <q-route-tab to="/cbd" label="CBD" />
         <q-route-tab to="/cbd" label="Fertilizantes" />
+        <q-route-tab to="/cbd" label="Semillas" />
+        <q-route-tab to="/cbd" label="Sustratos" />
+        <q-route-tab to="/cbd" label="Iluminacion" />
+        <q-route-tab to="/cbd" label="Ventilación" />
+        <q-route-tab to="/cbd" label="Parafernalia" />
       </q-tabs>
     </q-header>
 
@@ -33,30 +34,16 @@
         <q-item
           clickable
           v-ripple
-          :active="link === 'productosCBD'"
-          @click="link = 'productosCBD'"
+          :active="link === 'CBD'"
+          @click="link = 'CBD'"
           to="cbd"
           active-class="my-menu-link"
         >
           <q-item-section avatar>
-            <q-icon name="star_outline" />
+            <q-icon name="fas fa-cannabis" />
           </q-item-section>
 
-          <q-item-section>Productos CBD</q-item-section>
-        </q-item>
-
-        <q-item
-          clickable
-          v-ripple
-          :active="link === 'cultivos'"
-          @click="link = 'cultivos'"
-          active-class="my-menu-link"
-        >
-          <q-item-section avatar>
-            <q-icon name="eco" />
-          </q-item-section>
-
-          <q-item-section>Cultivos</q-item-section>
+          <q-item-section>CBD</q-item-section>
         </q-item>
 
         <q-item
@@ -71,6 +58,76 @@
           </q-item-section>
 
           <q-item-section>Fertilizantes</q-item-section>
+        </q-item>
+
+        <q-item
+          clickable
+          v-ripple
+          :active="link === 'semillas'"
+          @click="link = 'semillas'"
+          active-class="my-menu-link"
+        >
+          <q-item-section avatar>
+            <q-icon name="las la-seedling" />
+          </q-item-section>
+
+          <q-item-section>Semillas</q-item-section>
+        </q-item>
+
+        <q-item
+          clickable
+          v-ripple
+          :active="link === 'sustratos'"
+          @click="link = 'sustratos'"
+          active-class="my-menu-link"
+        >
+          <q-item-section avatar>
+            <q-icon name="las la-mountain" />
+          </q-item-section>
+
+          <q-item-section>Sustratos</q-item-section>
+        </q-item>
+
+        <q-item
+          clickable
+          v-ripple
+          :active="link === 'iluminacion'"
+          @click="link = 'iluminacion'"
+          active-class="my-menu-link"
+        >
+          <q-item-section avatar>
+            <q-icon name="far fa-lightbulb" />
+          </q-item-section>
+
+          <q-item-section>Iluminación</q-item-section>
+        </q-item>
+
+        <q-item
+          clickable
+          v-ripple
+          :active="link === 'ventilacion'"
+          @click="link = 'ventilacion'"
+          active-class="my-menu-link"
+        >
+          <q-item-section avatar>
+            <q-icon name="air" />
+          </q-item-section>
+
+          <q-item-section>Ventilación</q-item-section>
+        </q-item>
+
+        <q-item
+          clickable
+          v-ripple
+          :active="link === 'parafernalia'"
+          @click="link = 'parafernalia'"
+          active-class="my-menu-link"
+        >
+          <q-item-section avatar>
+            <q-icon name="las la-gift" />
+          </q-item-section>
+
+          <q-item-section>Parafernalia</q-item-section>
         </q-item>
 
         <q-separator spaced />
@@ -110,23 +167,95 @@
     </q-page-container>
 
     <!--FOOTER-->
-    <q-footer elevated class="bg-primary text-white">
-      <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg" />
-          </q-avatar>
-          Title
-        </q-toolbar-title>
+    <q-footer class="bg-primary text-white">
+      <div id="animated-footer" class="row col-12 bg-dark items-center ">
+        <p class="col-12 text-red-1">
+          <span class="text-warning text-weight-bolder"
+            >Pedido a domicilio GRATUITO</span
+          >
+          · LLamanos al <a href="tel:+34638342442">638342442</a>
+        </p>
+      </div>
+      <q-avatar class="q-ma-md">
+        <img src="../assets/aloha.png" alt="Logo Aloha Growshop" />
+      </q-avatar>
+      <q-toolbar class="row justify-center">
+        <div class="q-pa-md col-lg-3 col-sm-12" style="max-width: 350px">
+          <q-list bordered>
+            <q-item>
+              <q-item-section class="text-center">Información</q-item-section>
+            </q-item>
+            <q-item clickable v-ripple>
+              <q-item-section avatar>
+                <q-avatar text-color="white" icon="phone" />
+              </q-item-section>
+              <q-item-section
+                ><a href="tel:+34638342442">Llámanos</a></q-item-section
+              >
+            </q-item>
+            <q-item>
+              <q-item-section avatar>
+                <q-avatar text-color="white" icon="alternate_email" />
+              </q-item-section>
+              <q-item-section
+                ><a href="mailto:alohagrowshop@hotmail.com"
+                  >Contáctanos</a
+                ></q-item-section
+              >
+            </q-item>
+            <q-item>
+              <q-item-section avatar>
+                <q-avatar text-color="white" icon="room" />
+              </q-item-section>
+              <q-item-section>
+                Dirección
+                <p>Carrer de Guillem Galmés , 55</p>
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
       </q-toolbar>
     </q-footer>
   </q-layout>
 </template>
 
-<style lang="sass">
-.my-menu-link
-  color: white
-  background: #004D61
+<style lang="scss">
+.my-menu-link {
+  color: white;
+  background: #004d61;
+}
+
+#animated-footer {
+  overflow: hidden;
+  position: sticky;
+  bottom: 50px;
+  height: 50px;
+  p {
+    margin-bottom: 0px;
+    animation: marquee 20s linear infinite;
+  }
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container-logo {
+  background: rgba(0, 0, 0, 0) !important;
+  img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 </style>
 
 <script>

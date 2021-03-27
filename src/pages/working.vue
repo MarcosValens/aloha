@@ -1,0 +1,77 @@
+<template>
+  <div id="contenido_bienvenido">
+    <img src="../assets/aloha.png" alt="Aloha GrowShop logo" />
+
+    <p class="title">
+      <span class="welcome">¡Bienvenido a <ins> Aloha Growshop</ins>!</span>
+      <span>Estamos trabajando en la web</span>
+    </p>
+    <p>
+      Permanece atento, pronto encontraras ofertas y promociones solo accesibles
+      desde la web.
+      <br />
+      <br />
+      <a href="https://www.instagram.com/aloha_growshop/"
+        >Siguenos en Instagram</a
+      >
+      <br />
+      <br />Puedes hacer tus pedidos en el
+      <a href="tel:+34638342442">638342442</a>
+    </p>
+  </div>
+</template>
+
+<script></script>
+
+<style lang="scss" scoped>
+body {
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 80%;
+  color: #666;
+  width: 100%;
+}
+#contenido_bienvenido {
+  max-width: 600px;
+  margin: 100px auto;
+}
+#contenido_bienvenido p {
+  line-height: 28px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+#contenido_bienvenido p.title {
+  text-align: center;
+  color: #333;
+  margin: 0;
+  line-height: 45px;
+}
+#contenido_bienvenido p span {
+  font-size: 17px;
+  text-align: center;
+  color: #333;
+  margin: 5px 0;
+  display: block;
+}
+#contenido_bienvenido p.title span.welcome {
+  font-size: 45px;
+  margin: 0;
+}
+#contenido_bienvenido ins {
+  text-decoration: none;
+  color: #0f1d41;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2vh;
+  width: 40%;
+}
+a {
+  text-decoration: none;
+}
+</style>

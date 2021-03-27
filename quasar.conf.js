@@ -24,12 +24,12 @@ module.exports = function(/* ctx */) {
 
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
-      // 'ionicons-v4',
-      // 'mdi-v5',
-      // 'fontawesome-v5',
-      // 'eva-icons',
-      // 'themify',
-      // 'line-awesome',
+      "ionicons-v4",
+      "mdi-v5",
+      "fontawesome-v5",
+      "eva-icons",
+      "themify",
+      "line-awesome",
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
 
       "roboto-font", // optional, you are not bound to it
@@ -168,7 +168,7 @@ module.exports = function(/* ctx */) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: "alohacbd"
+        appId: "Aloha Growshop"
       },
 
       // More info: https://quasar.dev/quasar-cli/developing-electron-apps/node-integration
