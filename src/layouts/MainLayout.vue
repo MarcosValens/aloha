@@ -4,7 +4,7 @@
     <q-header reveal elevated class="text-white row justify-center">
       <q-parallax src="../assets/banner.jpg" :height="200">
         <q-toolbar
-          class="col-1 desktop-hide1"
+          class="col-1 desktop-hide"
           style="position: fixed; left:2vw; top:1vh"
         >
           <q-btn round color="secondary" icon="menu" @click="left = !left" />
@@ -19,12 +19,12 @@
       </q-parallax>
       <q-tabs align="center" class="desktop-only">
         <q-route-tab to="/cbd" label="CBD" />
-        <q-route-tab to="/cbd" label="Fertilizantes" />
-        <q-route-tab to="/cbd" label="Semillas" />
-        <q-route-tab to="/cbd" label="Sustratos" />
-        <q-route-tab to="/cbd" label="Iluminacion" />
-        <q-route-tab to="/cbd" label="Ventilación" />
-        <q-route-tab to="/cbd" label="Parafernalia" />
+        <q-route-tab to="/fertilizantes" label="Fertilizantes" />
+        <q-route-tab to="/semillas" label="Semillas" />
+        <q-route-tab to="/sustratos" label="Sustratos" />
+        <q-route-tab to="/iluminacion" label="Iluminación" />
+        <q-route-tab to="/ventilacion" label="Ventilación" />
+        <q-route-tab to="/parafernalia" label="Parafernalia" />
       </q-tabs>
     </q-header>
 
@@ -36,7 +36,7 @@
           v-ripple
           :active="link === 'CBD'"
           @click="link = 'CBD'"
-          to="cbd"
+          to="/cbd"
           active-class="my-menu-link"
         >
           <q-item-section avatar>
@@ -52,6 +52,7 @@
           :active="link === 'fertilizantes'"
           @click="link = 'fertilizantes'"
           active-class="my-menu-link"
+          to="/fertilizantes"
         >
           <q-item-section avatar>
             <q-icon name="local_drink" />
@@ -66,6 +67,7 @@
           :active="link === 'semillas'"
           @click="link = 'semillas'"
           active-class="my-menu-link"
+          to="/semillas"
         >
           <q-item-section avatar>
             <q-icon name="las la-seedling" />
@@ -80,6 +82,7 @@
           :active="link === 'sustratos'"
           @click="link = 'sustratos'"
           active-class="my-menu-link"
+          to="/sustratos"
         >
           <q-item-section avatar>
             <q-icon name="las la-mountain" />
@@ -94,6 +97,7 @@
           :active="link === 'iluminacion'"
           @click="link = 'iluminacion'"
           active-class="my-menu-link"
+          to="/iluminacion"
         >
           <q-item-section avatar>
             <q-icon name="far fa-lightbulb" />
@@ -108,6 +112,7 @@
           :active="link === 'ventilacion'"
           @click="link = 'ventilacion'"
           active-class="my-menu-link"
+          to="/ventilacion"
         >
           <q-item-section avatar>
             <q-icon name="air" />
@@ -122,6 +127,7 @@
           :active="link === 'parafernalia'"
           @click="link = 'parafernalia'"
           active-class="my-menu-link"
+          to="/parafernalia"
         >
           <q-item-section avatar>
             <q-icon name="las la-gift" />
@@ -205,11 +211,25 @@
             </q-item>
             <q-item>
               <q-item-section avatar>
+                <q-avatar text-color="white" icon="lab la-instagram" />
+              </q-item-section>
+              <q-item-section>
+                <a href="https://www.instagram.com/aloha_growshop/"
+                  >Instagram</a
+                >
+              </q-item-section>
+            </q-item>
+            <q-item>
+              <q-item-section avatar>
                 <q-avatar text-color="white" icon="room" />
               </q-item-section>
               <q-item-section>
                 Dirección
-                <p>Carrer de Guillem Galmés , 55</p>
+                <a
+                  href="https://maps.google.com/?q=Carrer de Guillem Galmés 55, Illes Balears, Palma de Mallorca"
+                  target="_blank"
+                  >Carrer de Guillem Galmés , 55</a
+                >
               </q-item-section>
             </q-item>
           </q-list>

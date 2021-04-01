@@ -1,1 +1,12 @@
 // app global css in SCSS form
+@font-face {
+  font-family: aloha-font;
+  src: url(../assets/fonts/Aloha.woff);
+}
+
+.aloha-font {
+  font-family: "aloha-font";
+  font-size: 6vw;
+  line-height: 10vh;
+  margin: 0 5vh 0 2vh;
+}
