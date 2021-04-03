@@ -12,7 +12,7 @@ export async function getData() {
 }
 
 export async function getProducts(id) {
-  const data = await api_rest.get(`/produtos/find?id=${id}`, {
+  const data = await api_rest.get(`/productos/find?marca_id=${id}`, {
     headers: {
       "Content-Type": "application/json"
     }
