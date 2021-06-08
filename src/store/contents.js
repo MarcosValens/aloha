@@ -7,8 +7,7 @@ export default {
     CBD se relaciona con otro fitocannabinoide medicinalmente activo:
     el tetrahidrocannabinol (THC), compuesto que causa la
     psicoactividad por el cannabis. Tanto el CBD como el THC tienen
-    características terapéuticas significativas. Pero el CBD no hace
-    que una persona se sienta que va "fumao".`,
+    características terapéuticas significativas.`,
     uri: "/marcas"
   },
   fertilizantes: {

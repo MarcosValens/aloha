@@ -10,3 +10,7 @@
   line-height: 10vh;
   margin: 0 5vh 0 2vh;
 }
+.q-btn--actionable.q-btn--standard .q-btn__wrapper:before {
+  transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+  height: fit-content;
+}
