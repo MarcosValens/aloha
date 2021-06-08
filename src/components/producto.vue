@@ -8,9 +8,8 @@
       <div class="text-h5 q-mt-sm q-mb-xs">{{ product.nombre }}</div>
       <div class="text-caption text-grey">
         <p>
-          {{ product.caracteristicas }}
+          {{ product.descripcion }}
         </p>
-        <h6 class="precio">{{ product.precio }} €</h6>
       </div>
       <q-card-actions>
         <q-space />
@@ -29,7 +28,7 @@
         <div v-show="expanded">
           <q-separator />
           <q-card-section class="text-subitle2">
-            {{ product.descripcion }}
+            {{ product.caracteristicas }}
           </q-card-section>
         </div>
       </q-slide-transition>

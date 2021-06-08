@@ -1,19 +1,22 @@
 <template>
   <q-page class="row flex flex-center q-pa-lg">
     <q-separator color="primary" />
-
-    <h4 class="col-12 text-center aloha-font">
+    <h6 class="col-12 text-center q-ma-lg">
       El mejor material al mejor precio para tu cultivo
-    </h4>
-    <h6 class="col-12 text-center">DESTACADOS</h6>
+    </h6>
+    <h6 class="col-12 text-center q-ma-sm">DESTACADOS</h6>
     <p class="col-12 text-center text-grey-8 ">
       Enterate aquí de cuales son nuestros productos estrella o las ultimas
       novedades sobre nuevos productos
     </p>
 
     <div class="row flex-center">
-      <novedades class="col-lg-4" />
-      <novedades class="col-lg-4" />
+      <novedades
+        class="col-lg-10"
+        v-for="offer in offers"
+        :key="offer.id"
+        v-bind:offer="offer"
+      />
     </div>
     <div class="row text-center justify-center q-mb-xl">
       <h4 class="col-12">Los profesionales con más experiencia</h4>
@@ -32,6 +35,7 @@
 <script>
 import novedades from "src/components/novedades.vue";
 import caracteristicas from "src/components/caracteristicas.vue";
+import * as service from "../boot/Service";
 
 export default {
   name: "PageIndex",
@@ -40,7 +44,18 @@ export default {
     caracteristicas
   },
   data() {
-    return {};
+    return {
+      offers: []
+    };
+  },
+  methods: {
+    async offersData() {
+      let offersData = await service.getOffers();
+      this.offers = offersData.data;
+    }
+  },
+  mounted() {
+    this.offersData();
   }
 };
 </script>

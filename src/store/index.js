@@ -1,12 +1,14 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
-import example from "./marca-task";
+import page from "./marca-task";
+import category from "./category-store";
 
 Vue.use(Vuex);
 const Store = new Vuex.Store({
   modules: {
-    page: example
+    page,
+    category
   },
 
   // enable strict mode (adds overhead!)

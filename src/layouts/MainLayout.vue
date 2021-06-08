@@ -2,7 +2,7 @@
   <q-layout view="hHh lpR fff">
     <!--HEADER-->
     <q-header reveal elevated class="text-white row justify-center">
-      <q-parallax src="../assets/banner.jpg" :height="200">
+      <q-parallax src="../assets/banner.jpg" :height="200" class="desktop-only">
         <q-toolbar
           class="col-1 desktop-hide"
           style="position: fixed; left:2vw; top:1vh"
@@ -17,14 +17,29 @@
           style="max-width: 150px"
         />
       </q-parallax>
+      <q-parallax src="../assets/banner.jpg" :height="100" class="desktop-hide">
+        <q-toolbar
+          class="col-1 desktop-hide"
+          style="position: fixed; left:2vw; top:1vh"
+        >
+          <q-btn round color="secondary" icon="menu" @click="left = !left" />
+          <q-toolbar-title class="row justify-center"> </q-toolbar-title>
+        </q-toolbar>
+        <q-img
+          src="../assets/aloha.png"
+          spinner-color="white"
+          alt="Logo Alohas"
+          style="max-width: 75px"
+        />
+      </q-parallax>
       <q-tabs align="center" class="desktop-only">
-        <q-route-tab to="/cbd" label="CBD" />
-        <q-route-tab to="/fertilizantes" label="Fertilizantes" />
-        <q-route-tab to="/semillas" label="Semillas" />
-        <q-route-tab to="/sustratos" label="Sustratos" />
-        <q-route-tab to="/iluminacion" label="Iluminación" />
-        <q-route-tab to="/ventilacion" label="Ventilación" />
-        <q-route-tab to="/parafernalia" label="Parafernalia" />
+        <q-route-tab to="/menu/cbd" label="CBD" />
+        <q-route-tab to="/menu/fertilizantes" label="Fertilizantes" />
+        <q-route-tab to="/menu/semillas" label="Semillas" />
+        <q-route-tab to="/menu/sustratos" label="Sustratos" />
+        <q-route-tab to="/menu/iluminacion" label="Iluminación" />
+        <q-route-tab to="/menu/ventilacion" label="Ventilación" />
+        <q-route-tab to="/menu/parafernalia" label="Parafernalia" />
       </q-tabs>
     </q-header>
 
@@ -36,7 +51,7 @@
           v-ripple
           :active="link === 'CBD'"
           @click="link = 'CBD'"
-          to="/cbd"
+          to="/menu/cbd"
           active-class="my-menu-link"
         >
           <q-item-section avatar>
@@ -52,7 +67,7 @@
           :active="link === 'fertilizantes'"
           @click="link = 'fertilizantes'"
           active-class="my-menu-link"
-          to="/fertilizantes"
+          to="/menu/fertilizantes"
         >
           <q-item-section avatar>
             <q-icon name="local_drink" />
@@ -67,7 +82,7 @@
           :active="link === 'semillas'"
           @click="link = 'semillas'"
           active-class="my-menu-link"
-          to="/semillas"
+          to="/menu/semillas"
         >
           <q-item-section avatar>
             <q-icon name="las la-seedling" />
@@ -82,7 +97,7 @@
           :active="link === 'sustratos'"
           @click="link = 'sustratos'"
           active-class="my-menu-link"
-          to="/sustratos"
+          to="/menu/sustratos"
         >
           <q-item-section avatar>
             <q-icon name="las la-mountain" />
@@ -97,7 +112,7 @@
           :active="link === 'iluminacion'"
           @click="link = 'iluminacion'"
           active-class="my-menu-link"
-          to="/iluminacion"
+          to="/menu/iluminacion"
         >
           <q-item-section avatar>
             <q-icon name="far fa-lightbulb" />
@@ -112,7 +127,7 @@
           :active="link === 'ventilacion'"
           @click="link = 'ventilacion'"
           active-class="my-menu-link"
-          to="/ventilacion"
+          to="/menu/ventilacion"
         >
           <q-item-section avatar>
             <q-icon name="air" />
@@ -127,7 +142,7 @@
           :active="link === 'parafernalia'"
           @click="link = 'parafernalia'"
           active-class="my-menu-link"
-          to="/parafernalia"
+          to="/menu/parafernalia"
         >
           <q-item-section avatar>
             <q-icon name="las la-gift" />
@@ -177,7 +192,7 @@
       <div id="animated-footer" class="row col-12 bg-dark items-center ">
         <p class="col-12 text-red-1">
           <span class="text-warning text-weight-bolder"
-            >Pedido a domicilio GRATUITO</span
+            >Pedido a domicilio GRATUITO (Pedidos superiores a 30 €)</span
           >
           · LLamanos al <a href="tel:+34638342442">638342442</a>
         </p>
@@ -185,8 +200,8 @@
       <q-avatar class="q-ma-md">
         <img src="../assets/aloha.png" alt="Logo Aloha Growshop" />
       </q-avatar>
-      <q-toolbar class="row justify-center">
-        <div class="q-pa-md col-lg-3 col-sm-12" style="max-width: 350px">
+      <div class="row justify-center">
+        <div class="q-pa-md col-lg-3 col-xs-12" style="max-width: 350px">
           <q-list bordered>
             <q-item>
               <q-item-section class="text-center">Información</q-item-section>
@@ -226,7 +241,7 @@
               <q-item-section>
                 Dirección
                 <a
-                  href="https://maps.google.com/?q=Carrer de Guillem Galmés 55, Illes Balears, Palma de Mallorca"
+                  href="https://www.google.com/maps/place/Aloha+growshop/@39.582489,2.6588836,16z/data=!4m5!3m4!1s0x129793abc6e86fcb:0x80820a78c0ed8410!8m2!3d39.5823815!4d2.6578322"
                   target="_blank"
                   >Carrer de Guillem Galmés , 55</a
                 >
@@ -234,7 +249,18 @@
             </q-item>
           </q-list>
         </div>
-      </q-toolbar>
+        <div class="q-pa-md col-lg-3 col-xs-12" style="max-width: 350px">
+          <iframe
+            height="250"
+            id="gmap_canvas"
+            src="https://maps.google.com/maps?q=aloha%20growshop&t=&z=17&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+          ></iframe>
+        </div>
+      </div>
     </q-footer>
   </q-layout>
 </template>

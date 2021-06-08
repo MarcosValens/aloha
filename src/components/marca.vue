@@ -1,17 +1,15 @@
 <template>
   <div class="q-pa-md row items-start q-gutter-md">
     <q-card class="my-card" flat bordered>
-      <q-btn style="height: 50vh" @click="goToProducts()">
+      <q-btn @click="goToProducts()">
         <q-img
-          :src="require(`../assets/${brand.imagen}`)"
-          :alt="brand.imagen + ' Logo'"
+          style="height: 200px; max-height: 200px"
+          :src="require(`../assets/${brand.image}`)"
+          :alt="brand.image + ' Logo'"
         />
 
-        <div class="text-h5 q-mt-sm q-mb-xs">{{ brand.nombre }}</div>
-        <div class="text-caption text-grey">
-          <p>
-            {{ brand.caracteristicas }}
-          </p>
+        <div class="text-h5 q-mt-sm q-mb-xs" style="min-width: 200px">
+          {{ brand.name }}
         </div>
       </q-btn>
       <q-card-actions>
@@ -30,8 +28,8 @@
       <q-slide-transition>
         <div v-show="expanded">
           <q-separator />
-          <q-card-section class="text-subitle2">
-            {{ brand.descripcion }}
+          <q-card-section class="text-subitle2" style="max-width: 200px">
+            {{ brand.description }}
           </q-card-section>
         </div>
       </q-slide-transition>
