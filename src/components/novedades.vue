@@ -6,37 +6,39 @@
           <div class="text-overline">Novedades</div>
           <div class="text-h5 q-mt-sm q-mb-xs">Ofertón</div>
           <div class="text-caption text-black">
-            ¡SALUDOS A TODOS! Desde el equipo de @aloha_growshop os traemos este
-            KIT DE ILUMINACION DE 600W que incluye balastro abierto, bombilla y
-            reflector con casquillo de porcelana ¡POR TAN SÓLO 59,99€ IVA
-            incluido!
+            {{ offer.texto_oferta }}
+          </div>
+          <div class="text-caption text-black q-pt-lg">
+            {{ offer.descripcion }}
+          </div>
+          <div class="text-caption text-black q-pt-lg">
+            {{ offer.caracteristicas }}
           </div>
         </q-card-section>
 
         <q-card-section class="col-5 flex flex-center">
           <q-img
             class="rounded-borders"
-            src="../assets/lampara.jpg"
+            :src="require(`../assets/${offer.imagen}`)"
             style="max-height: 300px; max-width: 300px"
           />
         </q-card-section>
       </q-card-section>
-
       <q-separator />
-
-      <q-card-actions class="justify-center">
-        <q-btn flat color="primary" class="col-12">
-          Reservar
-        </q-btn>
-      </q-card-actions>
+      <q-card-section class="col-5 flex flex-center">
+        <h5>POR TAN SOLO: {{ offer.precio }} €</h5>
+      </q-card-section>
     </q-card>
   </div>
 </template>
 
 <script>
 export default {
+  props: { offer: Object },
   data() {
-    return {};
+    return {
+      expanded: false
+    };
   }
 };
 </script>
