@@ -10,6 +10,11 @@ const routes = [
       {
         path: "/privacy-policy",
         component: () => import("pages/cookies.vue")
+      },
+      {
+        path: "/products",
+        name: "products",
+        component: () => import("pages/productos.vue")
       }
     ]
   },

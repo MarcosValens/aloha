@@ -51,7 +51,7 @@ export default {
   methods: {
     goToProducts() {
       this.$router.push({
-        name: "productos",
+        name: "products",
         params: { id: this.brand.id }
       });
     }

@@ -23,9 +23,7 @@ export default {
   methods: {
     async getProductos() {
       let x = await service.getProducts(this.productoId);
-      console.log(x.data);
       this.products = x.data;
-      console.log(this.products);
     }
   },
   mounted() {
