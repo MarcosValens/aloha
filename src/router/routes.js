@@ -14,16 +14,6 @@ const routes = [
     ]
   },
   {
-    path: "/",
-    component: () => import("layouts/MainLayout.vue"),
-    children: [
-      {
-        path: "/test",
-        component: () => import("pages/test.vue")
-      }
-    ]
-  },
-  {
     path: "/menu",
     component: () => import("layouts/MainLayout.vue"),
     children: [
