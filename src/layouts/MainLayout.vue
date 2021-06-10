@@ -234,6 +234,17 @@
             </q-item>
           </q-list>
         </div>
+        <div class="q-pa-md col-lg-3 col-xs-12" style="max-width: 350px">
+          <iframe
+            height="250"
+            id="gmap_canvas"
+            src="https://maps.google.com/maps?q=aloha%20growshop&t=&z=17&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+          ></iframe>
+        </div>
       </q-toolbar>
       <a href="/#/privacy-policy" id="cookiesPrivacyCheck"
         >Consulta nuestra política de cookies.
