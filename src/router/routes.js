@@ -14,53 +14,75 @@ const routes = [
       {
         path: "/",
         component: () => import("pages/Index.vue")
+      }
+    ]
+  },
+  {
+    path: "/menu",
+    component: () => import("layouts/asside.vue"),
+    children: [
+      {
+        path: "cbd",
+        meta: {
+          title: "CBD",
+          description:
+            "El cannabidiol (CBD) es un compuesto natural que genera en la flor del cannabis. Científicos y médicos están testeando las propiedades terapéuticas de CBD. Esta sustancia no es adictiva. El       CBD se relaciona con otro fitocannabinoide medicinalmente activo: el tetrahidrocannabinol (THC), compuesto que causa la psicoactividad por el cannabis. Tanto el CBD como el THC tienen características terapéuticas significativas."
+        },
+        component: () => import("src/pages/marcas.vue")
       },
       {
-        path: "/cbd",
-        component: () => import("src/pages/marcas.vue"),
-        name: "cbd",
-        beforeEnter
+        path: "fertilizantes",
+        meta: {
+          title: "FERTILIZANTES",
+          description:
+            "El cannabidiol (CBD) es un compuesto natural que genera en la flor del cannabis. Científicos y médicos están testeando las propiedades terapéuticas de CBD. Esta sustancia no es adictiva. El       CBD se relaciona con otro fitocannabinoide medicinalmente activo: el tetrahidrocannabinol (THC), compuesto que causa la psicoactividad por el cannabis. Tanto el CBD como el THC tienen características terapéuticas significativas."
+        },
+        component: () => import("src/pages/marcas.vue")
       },
       {
-        path: "/fertilizantes",
-        component: () => import("src/pages/marcas.vue"),
-        name: "fertilizantes",
-        beforeEnter
+        path: "semillas",
+        meta: {
+          title: "SEMILLAS",
+          description:
+            "El cannabidiol (CBD) es un compuesto natural que genera en la flor del cannabis. Científicos y médicos están testeando las propiedades terapéuticas de CBD. Esta sustancia no es adictiva. El       CBD se relaciona con otro fitocannabinoide medicinalmente activo: el tetrahidrocannabinol (THC), compuesto que causa la psicoactividad por el cannabis. Tanto el CBD como el THC tienen características terapéuticas significativas."
+        },
+        component: () => import("src/pages/marcas.vue")
       },
       {
-        path: "/semillas",
-        component: () => import("src/pages/marcas.vue"),
-        name: "semillas",
-        beforeEnter
+        path: "sustratos",
+        meta: {
+          title: "SUSTRATOS",
+          description:
+            "El cannabidiol (CBD) es un compuesto natural que genera en la flor del cannabis. Científicos y médicos están testeando las propiedades terapéuticas de CBD. Esta sustancia no es adictiva. El       CBD se relaciona con otro fitocannabinoide medicinalmente activo: el tetrahidrocannabinol (THC), compuesto que causa la psicoactividad por el cannabis. Tanto el CBD como el THC tienen características terapéuticas significativas."
+        },
+        component: () => import("src/pages/marcas.vue")
       },
       {
-        path: "/sustratos",
-        component: () => import("src/pages/marcas.vue"),
-        name: "sustratos",
-        beforeEnter
+        path: "iluminacion",
+        meta: {
+          title: "ILUMINACIÒN",
+          description:
+            "El cannabidiol (CBD) es un compuesto natural que genera en la flor del cannabis. Científicos y médicos están testeando las propiedades terapéuticas de CBD. Esta sustancia no es adictiva. El       CBD se relaciona con otro fitocannabinoide medicinalmente activo: el tetrahidrocannabinol (THC), compuesto que causa la psicoactividad por el cannabis. Tanto el CBD como el THC tienen características terapéuticas significativas."
+        },
+        component: () => import("src/pages/marcas.vue")
       },
       {
-        path: "/iluminacion",
-        component: () => import("src/pages/marcas.vue"),
-        name: "iluminacion",
-        beforeEnter
+        path: "ventilacion",
+        meta: {
+          title: "VENTILACIÓN",
+          description:
+            "El cannabidiol (CBD) es un compuesto natural que genera en la flor del cannabis. Científicos y médicos están testeando las propiedades terapéuticas de CBD. Esta sustancia no es adictiva. El       CBD se relaciona con otro fitocannabinoide medicinalmente activo: el tetrahidrocannabinol (THC), compuesto que causa la psicoactividad por el cannabis. Tanto el CBD como el THC tienen características terapéuticas significativas."
+        },
+        component: () => import("src/pages/marcas.vue")
       },
       {
-        path: "/ventilacion",
-        component: () => import("src/pages/marcas.vue"),
-        name: "ventilacion",
-        beforeEnter
-      },
-      {
-        path: "/parafernalia",
-        component: () => import("src/pages/marcas.vue"),
-        name: "parafernalia",
-        beforeEnter
-      },
-      {
-        path: "/productos/:id",
-        name: "productos",
-        component: () => import("pages/productos.vue")
+        path: "parafernalia",
+        meta: {
+          title: "PARAFERNALIA",
+          description:
+            "El cannabidiol (CBD) es un compuesto natural que genera en la flor del cannabis. Científicos y médicos están testeando las propiedades terapéuticas de CBD. Esta sustancia no es adictiva. El       CBD se relaciona con otro fitocannabinoide medicinalmente activo: el tetrahidrocannabinol (THC), compuesto que causa la psicoactividad por el cannabis. Tanto el CBD como el THC tienen características terapéuticas significativas."
+        },
+        component: () => import("src/pages/marcas.vue")
       }
     ]
   },
