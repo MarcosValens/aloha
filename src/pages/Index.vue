@@ -26,7 +26,6 @@
       </p>
     </div>
     <caracteristicas class="q-pb-xl"> </caracteristicas>
-    <a href="#" id="open_preferences_center">Change your cookie preferences</a>
   </q-page>
 </template>
 

@@ -235,6 +235,9 @@
           </q-list>
         </div>
       </q-toolbar>
+      <a href="/#/privacy-policy" id="cookiesPrivacyCheck"
+        >Consulta nuestra política de cookies.
+      </a>
     </q-footer>
   </q-layout>
 </template>

@@ -6,6 +6,10 @@ const routes = [
       {
         path: "/",
         component: () => import("pages/Index.vue")
+      },
+      {
+        path: "/privacy-policy",
+        component: () => import("pages/cookies.vue")
       }
     ]
   },
