@@ -26,6 +26,7 @@
       </p>
     </div>
     <caracteristicas class="q-pb-xl"> </caracteristicas>
+    <a href="#" id="open_preferences_center">Change your cookie preferences</a>
   </q-page>
 </template>
 
@@ -63,7 +64,7 @@ export default {
           // console.log('>>>> OK')
         })
         .onCancel(() => {
-          window.history.back();
+          window.location = "https://www.google.com";
         })
         .onDismiss(() => {
           // console.log('I am triggered on both OK and Cancel')
