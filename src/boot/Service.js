@@ -19,3 +19,12 @@ export async function getProducts(id) {
   });
   return data;
 }
+
+export async function getOffers() {
+  const data = await api_rest.get(`/productos/offers`, {
+    headers: {
+      "Content-Type": "application/json"
+    }
+  });
+  return data;
+}
