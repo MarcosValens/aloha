@@ -19,7 +19,7 @@ const routes = [
   },
   {
     path: "/menu",
-    component: () => import("layouts/asside.vue"),
+    component: () => import("layouts/MainLayout.vue"),
     children: [
       {
         path: "cbd",

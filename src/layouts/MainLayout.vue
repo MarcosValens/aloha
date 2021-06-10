@@ -18,13 +18,13 @@
         />
       </q-parallax>
       <q-tabs align="center" class="desktop-only">
-        <q-route-tab to="/cbd" label="CBD" />
-        <q-route-tab to="/fertilizantes" label="Fertilizantes" />
-        <q-route-tab to="/semillas" label="Semillas" />
-        <q-route-tab to="/sustratos" label="Sustratos" />
-        <q-route-tab to="/iluminacion" label="Iluminación" />
-        <q-route-tab to="/ventilacion" label="Ventilación" />
-        <q-route-tab to="/parafernalia" label="Parafernalia" />
+        <q-route-tab to="/menu/cbd" label="CBD" />
+        <q-route-tab to="/menu/fertilizantes" label="Fertilizantes" />
+        <q-route-tab to="/menu/semillas" label="Semillas" />
+        <q-route-tab to="/menu/sustratos" label="Sustratos" />
+        <q-route-tab to="/menu/iluminacion" label="Iluminación" />
+        <q-route-tab to="/menu/ventilacion" label="Ventilación" />
+        <q-route-tab to="/menu/parafernalia" label="Parafernalia" />
       </q-tabs>
     </q-header>
 
@@ -36,7 +36,7 @@
           v-ripple
           :active="link === 'CBD'"
           @click="link = 'CBD'"
-          to="/cbd"
+          to="/menu/cbd"
           active-class="my-menu-link"
         >
           <q-item-section avatar>
@@ -52,7 +52,7 @@
           :active="link === 'fertilizantes'"
           @click="link = 'fertilizantes'"
           active-class="my-menu-link"
-          to="/fertilizantes"
+          to="/menu/fertilizantes"
         >
           <q-item-section avatar>
             <q-icon name="local_drink" />
@@ -67,7 +67,7 @@
           :active="link === 'semillas'"
           @click="link = 'semillas'"
           active-class="my-menu-link"
-          to="/semillas"
+          to="/menu/semillas"
         >
           <q-item-section avatar>
             <q-icon name="las la-seedling" />
@@ -82,7 +82,7 @@
           :active="link === 'sustratos'"
           @click="link = 'sustratos'"
           active-class="my-menu-link"
-          to="/sustratos"
+          to="/menu/sustratos"
         >
           <q-item-section avatar>
             <q-icon name="las la-mountain" />
@@ -97,7 +97,7 @@
           :active="link === 'iluminacion'"
           @click="link = 'iluminacion'"
           active-class="my-menu-link"
-          to="/iluminacion"
+          to="/menu/iluminacion"
         >
           <q-item-section avatar>
             <q-icon name="far fa-lightbulb" />
@@ -112,7 +112,7 @@
           :active="link === 'ventilacion'"
           @click="link = 'ventilacion'"
           active-class="my-menu-link"
-          to="/ventilacion"
+          to="/menu/ventilacion"
         >
           <q-item-section avatar>
             <q-icon name="air" />
@@ -127,7 +127,7 @@
           :active="link === 'parafernalia'"
           @click="link = 'parafernalia'"
           active-class="my-menu-link"
-          to="/parafernalia"
+          to="/menu/parafernalia"
         >
           <q-item-section avatar>
             <q-icon name="las la-gift" />
