@@ -1,13 +1,13 @@
 <template>
   <div class="q-pa-md flex row">
     <div class="col-12 text-center">
-      <h3 class="aloha-font" style="font-size:3vw">{{ currentPage.title }}</h3>
+      <h3 class="aloha-font">{{ $route.meta.title }}</h3>
 
       <q-separator color="primary" />
       <div class="row justify-center">
         <div class="col-8 q-mt-lg text-grey-8">
           <section>
-            <p>{{ currentPage.content }}</p>
+            <p>{{ $route.meta.description }}</p>
           </section>
         </div>
       </div>
@@ -60,7 +60,8 @@ export default {
     getAmbito() {
       this.marcasFiltradas = [];
       this.marcas.forEach(marca => {
-        if (marca.ambito == this.$router.currentRoute.name) {
+        let ambito = marca.ambito.toUpperCase();
+        if (ambito == this.$route.meta.title) {
           this.marcasFiltradas.push(marca);
         }
       });

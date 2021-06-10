@@ -41,6 +41,37 @@ export default {
   },
   data() {
     return {};
+  },
+  methods: {
+    allow18() {
+      this.$q
+        .dialog({
+          title: "Necesitas ser mayor de edad para visitar nuestra web",
+          message: "¿Eres mayor de edad?",
+          ok: {
+            push: true,
+            label: "Si"
+          },
+          cancel: {
+            push: false,
+            label: "No",
+            color: "negative"
+          },
+          persistent: true
+        })
+        .onOk(() => {
+          // console.log('>>>> OK')
+        })
+        .onCancel(() => {
+          window.history.back();
+        })
+        .onDismiss(() => {
+          // console.log('I am triggered on both OK and Cancel')
+        });
+    }
+  },
+  mounted() {
+    this.allow18();
   }
 };
 </script>
