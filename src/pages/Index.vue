@@ -32,6 +32,7 @@
 <script>
 import novedades from "src/components/novedades.vue";
 import caracteristicas from "src/components/caracteristicas.vue";
+import * as service from "../boot/Service";
 
 export default {
   name: "PageIndex",
