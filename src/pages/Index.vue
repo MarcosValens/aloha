@@ -12,8 +12,12 @@
     </p>
 
     <div class="row flex-center">
-      <novedades class="col-lg-4" />
-      <novedades class="col-lg-4" />
+      <novedades
+        class="col-lg-10"
+        v-for="offer in offers"
+        :key="offer.id"
+        v-bind:offer="offer"
+      />
     </div>
     <div class="row text-center justify-center q-mb-xl">
       <h4 class="col-12">Los profesionales con más experiencia</h4>
@@ -85,6 +89,3 @@ export default {
 </script>
 
 <style lang="scss" scoped></style>
-data() { return { offers: [] }; }, methods: { async offersData() { let
-offersData = await service.getOffers(); this.offers = offersData.data; } },
-mounted() { this.offersData(); }
