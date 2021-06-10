@@ -40,9 +40,15 @@ export default {
     caracteristicas
   },
   data() {
-    return {};
+    return {
+      offers: []
+    };
   },
   methods: {
+    async offersData() {
+      let offersData = await service.getOffers();
+      this.offers = offersData.data;
+    },
     allow18() {
       this.$q
         .dialog({
@@ -72,8 +78,12 @@ export default {
   },
   mounted() {
     this.allow18();
+    this.offersData();
   }
 };
 </script>
 
 <style lang="scss" scoped></style>
+data() { return { offers: [] }; }, methods: { async offersData() { let
+offersData = await service.getOffers(); this.offers = offersData.data; } },
+mounted() { this.offersData(); }
