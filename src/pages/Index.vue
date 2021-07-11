@@ -71,7 +71,7 @@ export default {
           persistent: true
         })
         .onOk(() => {
-          // console.log('>>>> OK')
+          localStorage.setItem("allow18", true);
         })
         .onCancel(() => {
           window.location = "https://www.google.com";
@@ -82,7 +82,11 @@ export default {
     }
   },
   mounted() {
-    this.allow18();
+    let x = localStorage.getItem("allow18");
+    if (!x) {
+      this.allow18();
+    }
+
     this.offersData();
   }
 };

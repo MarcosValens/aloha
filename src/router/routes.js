@@ -27,7 +27,7 @@ const routes = [
         meta: {
           title: "CBD",
           description:
-            "El cannabidiol (CBD) es un compuesto natural que genera en la flor del cannabis. Cientificos y medicos están testeando las propiedades terapeuticas de CBD. Esta sustancia no es adictiva. El CBD se relaciona con otro fitocannabinoide medicinalmente activo: el tetrahidrocannabinol (THC), compuesto que causa la psicoactividad por el cannabis. Tanto el CBD como el THC tienen características terapéuticas significativas."
+            "El cannabidiol (CBD) es un compuesto natural que genera en la flor del cannabis. Cientificos y medicos estan testeando las propiedades terapeuticas de CBD. Esta sustancia no es adictiva. El CBD se relaciona con otro fitocannabinoide medicinalmente activo: el tetrahidrocannabinol (THC), compuesto que causa la psicoactividad por el cannabis. Tanto el CBD como el THC tienen caracteristicas terapeuticas significativas."
         },
         component: () => import("src/pages/marcas.vue")
       },
