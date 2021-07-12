@@ -5,12 +5,8 @@
         :src="require(`../assets/${product.imagen}`)"
         :alt="product.imagen + ' Logo'"
       />
-      <div class="text-h5 q-mt-sm q-mb-xs">{{ product.nombre }}</div>
-      <div class="text-caption text-grey">
-        <p>
-          {{ product.caracteristicas }}
-        </p>
-        <h6 class="precio">{{ product.precio }} €</h6>
+      <div class="q-mt-sm q-mb-xs" style="font-size:2vw;">
+        {{ product.nombre }}
       </div>
       <q-card-actions>
         <q-space />

@@ -1,8 +1,9 @@
 <template>
-  <div class="row justify-center text-center">
+  <div class="row justify-center text-center" style="flex-wrap:wrap">
     <producto1
-      class="q-pt-xl"
+      class="q-pt-xl col-xl-2 col-md-2 col-sm-3 col-xs-6"
       v-for="producto in products"
+      style="min-height: 20vh; min-width:5vw"
       :key="producto.id"
       v-bind:product="producto"
     ></producto1>

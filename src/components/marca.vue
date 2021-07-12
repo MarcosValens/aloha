@@ -1,18 +1,13 @@
 <template>
-  <div class="q-pa-md row items-start q-gutter-md ">
-    <q-card
-      class="my-card col-xl-1 col-md-1"
-      style="min-width:7vw"
-      flat
-      bordered
-    >
-      <q-btn style="min-height: 20vh; min-width:5vw" @click="goToProducts()">
+  <div class="q-pa-md row items-start q-gutter-md">
+    <q-card class="my-card col-xl-1 col-md-1" flat bordered>
+      <q-btn @click="goToProducts()">
         <q-img
           :src="require(`../assets/${brand.imagen}`)"
           :alt="brand.imagen + ' Logo'"
         />
 
-        <p class="q-mt-sm">{{ brand.nombre }}</p>
+        <p class="q-mt-sm" style="font-size:2vw;">{{ brand.nombre }}</p>
       </q-btn>
     </q-card>
   </div>

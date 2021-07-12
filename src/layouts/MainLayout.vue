@@ -185,66 +185,64 @@
       <q-avatar class="q-ma-md">
         <img src="../assets/aloha.png" alt="Logo Aloha Growshop" />
       </q-avatar>
-      <q-toolbar class="row justify-center">
-        <div class="q-pa-md col-lg-3 col-sm-12" style="max-width: 350px">
-          <q-list bordered>
-            <q-item>
-              <q-item-section class="text-center">Información</q-item-section>
-            </q-item>
-            <q-item clickable v-ripple>
-              <q-item-section avatar>
-                <q-avatar text-color="white" icon="phone" />
-              </q-item-section>
-              <q-item-section
-                ><a href="tel:+34638342442">Llámanos</a></q-item-section
+      <q-toolbar
+        class="justify-center q-gutter-md"
+        style="flex-wrap: wrap !important"
+      >
+        <q-list bordered>
+          <q-item>
+            <q-item-section class="text-center">Información</q-item-section>
+          </q-item>
+          <q-item clickable v-ripple>
+            <q-item-section avatar>
+              <q-avatar text-color="white" icon="phone" />
+            </q-item-section>
+            <q-item-section
+              ><a href="tel:+34638342442">Llámanos</a></q-item-section
+            >
+          </q-item>
+          <q-item>
+            <q-item-section avatar>
+              <q-avatar text-color="white" icon="alternate_email" />
+            </q-item-section>
+            <q-item-section
+              ><a href="mailto:alohagrowshop@hotmail.com"
+                >Contáctanos</a
+              ></q-item-section
+            >
+          </q-item>
+          <q-item>
+            <q-item-section avatar>
+              <q-avatar text-color="white" icon="lab la-instagram" />
+            </q-item-section>
+            <q-item-section>
+              <a href="https://www.instagram.com/aloha_growshop/">Instagram</a>
+            </q-item-section>
+          </q-item>
+          <q-item>
+            <q-item-section avatar>
+              <q-avatar text-color="white" icon="room" />
+            </q-item-section>
+            <q-item-section>
+              Dirección
+              <a
+                href="https://maps.google.com/?q=Carrer de Guillem Galmés 55, Illes Balears, Palma de Mallorca"
+                target="_blank"
+                >Carrer de Guillem Galmés , 55</a
               >
-            </q-item>
-            <q-item>
-              <q-item-section avatar>
-                <q-avatar text-color="white" icon="alternate_email" />
-              </q-item-section>
-              <q-item-section
-                ><a href="mailto:alohagrowshop@hotmail.com"
-                  >Contáctanos</a
-                ></q-item-section
-              >
-            </q-item>
-            <q-item>
-              <q-item-section avatar>
-                <q-avatar text-color="white" icon="lab la-instagram" />
-              </q-item-section>
-              <q-item-section>
-                <a href="https://www.instagram.com/aloha_growshop/"
-                  >Instagram</a
-                >
-              </q-item-section>
-            </q-item>
-            <q-item>
-              <q-item-section avatar>
-                <q-avatar text-color="white" icon="room" />
-              </q-item-section>
-              <q-item-section>
-                Dirección
-                <a
-                  href="https://maps.google.com/?q=Carrer de Guillem Galmés 55, Illes Balears, Palma de Mallorca"
-                  target="_blank"
-                  >Carrer de Guillem Galmés , 55</a
-                >
-              </q-item-section>
-            </q-item>
-          </q-list>
-        </div>
-        <div class="q-pa-md col-lg-3 col-xs-12" style="max-width: 350px">
-          <iframe
-            height="250"
-            id="gmap_canvas"
-            src="https://maps.google.com/maps?q=aloha%20growshop&t=&z=17&ie=UTF8&iwloc=&output=embed"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0"
-          ></iframe>
-        </div>
+            </q-item-section>
+          </q-item>
+        </q-list>
+
+        <iframe
+          height="250"
+          id="gmap_canvas"
+          src="https://maps.google.com/maps?q=aloha%20growshop&t=&z=17&ie=UTF8&iwloc=&output=embed"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+        ></iframe>
       </q-toolbar>
       <a href="/#/privacy-policy" id="cookiesPrivacyCheck"
         >Consulta nuestra política de cookies.
