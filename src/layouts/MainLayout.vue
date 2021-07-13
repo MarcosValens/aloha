@@ -34,6 +34,21 @@
         <q-item
           clickable
           v-ripple
+          :active="link === 'inicio'"
+          @click="link = 'inicio'"
+          to="/"
+          active-class="my-menu-link"
+        >
+          <q-item-section avatar>
+            <q-icon name="fas fa-home" />
+          </q-item-section>
+
+          <q-item-section>Inicio</q-item-section>
+        </q-item>
+        <q-separator spaced />
+        <q-item
+          clickable
+          v-ripple
           :active="link === 'CBD'"
           @click="link = 'CBD'"
           to="/menu/cbd"
@@ -136,9 +151,9 @@
           <q-item-section>Parafernalia</q-item-section>
         </q-item>
 
-        <q-separator spaced />
+        <!-- <q-separator spaced />
 
-        <q-item
+         <q-item
           clickable
           v-ripple
           :active="link === 'settings'"
@@ -161,10 +176,10 @@
         >
           <q-item-section avatar>
             <q-icon name="help" />
-          </q-item-section>
+          </q-item-section> 
 
           <q-item-section>Ayuda</q-item-section>
-        </q-item>
+        </q-item>-->
       </q-list>
     </q-drawer>
 
