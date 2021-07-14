@@ -7,7 +7,7 @@
           :alt="brand.imagen + ' Logo'"
         />
 
-        <p class="q-mt-sm" style="font-size:2vw;">{{ brand.nombre }}</p>
+        <p class="q-mt-sm" style="font-size:3vw;">{{ brand.nombre }}</p>
       </q-btn>
     </q-card>
   </div>
